@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Mobility Planner</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+      }
+      .map {
+        width: 100%;
+        height: 500px;
+      }
+      .location-input {
+        margin-bottom: 20px;
+      }
+      .mapboxgl-ctrl-geocoder {
+        width: 300px;
+      }
+      .mapboxgl-ctrl-geocoder input {
+        width: 100%;
+      }
+      .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input {
+        width: 100%;
+      }
+      .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--dropdown {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+</style>
+<body>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <div class="location-input">
+        <h2>Route Planner</h2>
+        <form id="route-form">
+          <label for="start">Starting Point:</label>
+          <div id="start"></div>
+          <label for="end">Destination:</label>
+          <div id="end"></div>
+          <button type="button" id="calculate-route">Calculate Route</button>
+          <button type="button" id="save-favorite">Save as Favorite</button>
+          <p id="error-message" class="error-message"></p>
+        </form>
+      </div>
+      <div class="map" id="map"></div>
+      <div class="route-info" id="route-info">
+        <h2>Route Information</h2>
+        <p id="distance"></p>
+        <p id="duration"></p>
+      </div>
+    </div>
+    <div class="favorites-section">
+      <h2>Favorite Routes</h2>
+      <ul id="favorites-list"></ul>
+    </div>
+</body>
+</html>

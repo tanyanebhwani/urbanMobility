@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.w-100{
+    width: 100vw;
+}
+.pink{
+    background-color: #febfcc;
+}
 body {
     font-family: "Baloo Bhaina 2", sans-serif;
     margin: 0;
@@ -7,7 +13,7 @@ body {
 .btn{
     font-size: 1rem;
     font-weight: 100;
-    padding: 2.5vh 8vh;
+    padding: 15px 50px;
     border-radius: 4.5vh;
 }
 .navbar
@@ -15,7 +21,6 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 200;
-    height:120px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,7 +30,7 @@ body {
 .nav-section
 {
     position: relative;
-    height: 80%;
+    height: 96px;
     width: 85%;
     margin: auto;
     display: flex;
@@ -49,12 +54,13 @@ body {
     height: 70%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     background-color: white;
     border-radius: 35px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .nav-items{
-    width: 70%;
+    width: 60%;
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -67,15 +73,50 @@ body {
     color: black;
 }
 .nav-buttons{
-    width:30%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+}
+.bar-svg{
+    display: flex;
+    height: 47px;
+    width: 51px;
+    border: 2px solid #00a274;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 .btn-signin{
     margin-top: 0;
-    margin-left: 4vh;
+    margin-right: 2vw;
     color: white;
     background-color: rgba(0, 112, 80, 1);
+}
+.nav-items-vertical{
+    height: 0;
+    background-color: rgb(249,241,230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: height 2s;
+}
+.nav-list{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.nav-item-vertical{
+    margin: 5px 0;
+}
+.nav-item-vertical a{
+    color: #00a274;
+    text-decoration: none;
+}
+.res-button-section{
+    display: none;
 }
 .main-content {
     width: 100%;
@@ -86,7 +127,7 @@ body {
 {
     display: flex;
     width:100%;
-    height: 100vh;
+    height: 800px;
 }
 .banner-text
 {
@@ -132,13 +173,14 @@ body {
     background-color: rgb(249,241,230);
 }
 .overlap-section{
-    height: 80vh;
+    position: relative;
+    height: 410px;
 }
 .ov-img{
     position: absolute;
     border-radius: 40px;
-    height: 40vh;
-    width: 40vh;
+    height: 250px;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,23 +190,21 @@ body {
     width: 80%;
 }
 .img-1{
-    background-color: #cbf5e9;
-    top:95vh;
-    left:30vw;
+    background-color: white;
+    top: -20px;
+    left:300px;
     z-index: 1;
 }
 .img-2{
     background-color: rgb(223, 236, 248);
-    height: 50vh;
-    width: 50vh;
-    top: 120vh;
-    left: 85vh;
+    top: 95px;
+    left: 450px;
     z-index: 2;
 }
 .img-3{
     background-color: rgb(197, 177, 177);
-    top: 148vh;
-    left: 112vh;
+    top: 220px;
+    left: 600px;
     z-index: 3;
 }
 .curved-section{
@@ -188,6 +228,8 @@ body {
     margin-bottom: 0px;
 }
 .curved-section-content p{
+    width: 90vw;
+    margin: auto;
     font-size: 1.5rem;
     text-align: center;
     line-height: 120%;
@@ -271,8 +313,8 @@ body {
 .test-image{
     margin-left: 3vw;
     border-radius: 50%;
-    height: 40%;
-    width:10%;
+    height: 95px;
+    width:130px;
     background-image: url("testimonial-image.jfif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -359,11 +401,11 @@ body {
 .comp-logo{
     height: 100px;
     width: 100px;
-    border-radius: 50%;
     margin-bottom: 10px;
-    background-image: url("logo.jpeg");
-    background-size: cover;
-    background-position: -10px;
+}
+.comp-info img{
+    height: 100%;
+    width: 100%;
 }
 .app-head{
     margin-bottom: 0;
@@ -405,7 +447,312 @@ body {
     align-items: center;
     justify-content: center;
 }
-.location-input, .map, .route-info {
+/**Media Queries**/
+@media only screen and (max-width: 1350px){
+    .app-image{
+        width: 159px;
+    }
+    .icon{
+        width: 41px;
+        height:39px;
+    }
+    .link-sec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .comp-info{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1298px) {
+    .banner-text-content h1{
+      font-size: 2.5rem;
+    }
+    .banner-text-content p{
+        font-size: 1.3rem;
+      }
+      .test-image{
+        display: none;
+      }
+  }
+  @media only screen and (max-width: 1124px) {
+    .banner{
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+    }
+    .banner-text{
+        width: 100%;
+        height: 80vh;
+    }
+    .banner-text h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .banner-text p{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .banner-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-image img{
+        height: 50vh;
+        width: auto;
+    }
+    .banner-buttons{
+        justify-content: center;
+    }
+    .curved-section-content h1{
+        font-size: 2.5rem;
+    }
+    .curved-section-content p{
+        font-size: 1.5rem;
+    }
+}
+  @media only screen and (max-width: 862px)
+  {
+    .test-auth{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 940px) {
+    .nav-buttons{
+        display: none;
+    }
+    .navbar{
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-logo{
+        margin-left: 50px;
+    }
+    .nav-section-one{
+        margin-right: 0;
+    }
+    .nav-section{
+        width: 100%;
+        margin-top: 15px;
+        height: 50%;
+        justify-content: space-between;
+    }
+    .nav-section-two{
+        width: 351px;
+        justify-content: flex-start;
+        margin-right: 20px;
+    }
+    .res-button-section{
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #febfcc;
+        width: 100%;
+    }
+    .banner-text-content{
+        margin-top: 50px;
+    }
+    .banner-buttons .btn-signup{
+        margin-top: 0;
+        display: none;
+    }
+    .btn-signup{
+        margin-right: 9vw;
+    }
+    .features{
+        width: 75vw;
+    }
+    .feature-image{
+        margin: 0 3vw;
+    }
+    .test-btn{
+        height: 15px;
+    }
+  }
+  @media only screen and (max-width: 847px) {
+    .nav-items li{
+        margin: 0 10px;
+    }
+  }
+  @media only screen and (max-width: 787px) {
+    .curved-section-content h1{
+        font-size: 2rem;
+    }
+    .curved-section-content p{
+        font-size: 1rem;
+    }
+    .feature-heading{
+        font-size: 1.5rem;
+    }
+    .feature-desc{
+        font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 630px)
+  {
+    .nav-items{
+        display:none;
+    }
+    .nav-section-two{
+        width: 70px;
+        justify-content: center;
+    }
+    .bar-svg{
+        display: flex;
+    }
+    .testimonial{
+        flex-direction: column;
+    }
+    .test-image{
+        display: block;
+        width: 59px;
+        height: 56px;
+    }
+    .test-desc{
+        display: none;
+    }
+    .test-auth{
+        display: block;
+        font-size: 1rem;
+    }
+    .icons{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 597px){
+    .curved-section-content h1{
+        font-size: 1.5rem;
+    }
+    .curved-section-content p{
+        font-size: 1rem;
+    }
+    .posts h1{
+        font-size: 1rem;
+    }
+    .posts p{
+        font-size: 0.85rem;
+    }
+  }
+  @media only screen and (max-width: 555px){
+    .nav-section-two{
+        height: 50%;
+        width: 40px;
+    }
+    .nav-logo{
+        margin-left: 20px;
+    }
+    .bar-svg{
+        height: 35px;
+        width: 35px;
+    }
+    .bar-svg svg{
+        width: 25px;
+    }
+    .banner-text-content h1{
+        font-size: 2rem;
+    }
+    .banner-text-content p{
+        font-size: 1rem;
+    }
+    .feature-image{
+        display: none;
+    }
+    .feature-desc{
+        margin: 20px;
+    }
+    .ov-img{
+        height: 200px;
+        width: 200px;
+    }
+    .overlap-section{
+        height: 35vh;
+    }
+    .img-1{
+        left: 100px;
+    }
+    .img-2{
+
+        top: 50px;
+        left: 150px;
+    }
+    .img-3{
+        top: 120px;
+        left: 200px;
+    }
+    .testimonial{
+        width: 70vw;
+    }
+    .test-image{
+        display: none;
+    }
+    .app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-image{
+        width: 48px;
+        height: 51px;
+        background-size: cover;
+        border-radius: 50%;
+        background-position: 10px 0;
+        background-color: white;
+    }
+  }
+  @media only screen and (max-width: 520px){
+    .curved-section-content p{
+        margin: 0 20px;
+    }
+  }
+  @media only screen and (max-width: 469px){
+    .testimonial{
+        width: 80vw;
+    }
+    .posts{
+        width: 80vw;
+    }
+  }
+  @media only screen and (max-width: 443px){
+    .curved-section{
+        height: 40vh;
+    }
+    .curved-section h1{
+        font-size: 0.9rem;
+    }
+    .curved-section p{
+        font-size: 0.6rem;
+    }
+  }
+  @media only screen and (max-width: 421px){
+    .banner-text p{
+        margin: 0 20px;
+    }
+    .btn-signin{
+        padding: 12px 30px;
+        margin-right: 20px;
+    }
+    .btn-signup{
+        padding: 12px 30px;
+        margin-left: 20px;
+    }
+    .res-button-section{
+        justify-content: space-between;
+    }
+  }
+  @media only screen and (max-width: 380px){
+    .features{
+        width: 95vw;
+    }
+    .ov-img{
+        height:150px;
+        width:150px;
+    }
+  }
+/*.location-input, .map, .route-info {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -462,4 +809,4 @@ button:hover {
     color: #febfcc
     margin-top: 10px;
     font-size: 14px;
-}
+}*/
