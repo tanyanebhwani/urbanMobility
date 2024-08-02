@@ -1,0 +1,69 @@
+body{
+    background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
+}
+.navbar{
+    position: relative;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+}
+.contact-form{
+    background-color: #febfcc;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-details{
+    color: #00a274;
+    height: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-field .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form-control{
+    outline: none;
+    background-color: rgb(249,241,230);
+}
+.input-field .icon{
+    height: 38px;
+    width: 30px;
+    color: rgb(235, 24, 59);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-container input:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.btn-create{
+    color: white;
+    background-color: #00a274;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SignIn Form</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="signup-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-section">
+            <div class="nav-section-one">
+                <div class="nav-logo">
+                    <img src="RouteWise.png" alt="" />
+                </div>
+            </div>
+            <div class="nav-section-two">
+                <ul class="nav-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn btn-signin">Sign In</button>
+                </div>
+                <div class="bar-svg">
+                    <svg width="30px" fill="#00a274" viewBox="0 0 32 32" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#00a274">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>bars</title>
+                            <path
+                                d="M2 9.249h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0zM30 14.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0zM30 22.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="nav-items-vertical">
+            <ul class="nav-list">
+                <li class="nav-item-vertical"><a href="">Home</a></li>
+                <li class="nav-item-vertical"><a href="">About</a></li>
+                <li class="nav-item-vertical"><a href="">Contact</a></li>
+                <li class="nav-item-vertical"><a href="">Help</a></li>
+            </ul>
+        </div>
+        <div class="res-button-section">
+            <button class="btn btn-signup">Sign Up</button>
+            <button class="btn btn-signin">Sign In</button>
+        </div>
+    </nav>
+    <main>
+        <div class="contact-form">
+            <div class="form-details">
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Enter your Details</h4>
+                    <form class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <div class="col-sm-6 input-container">
+                                <label for="firstName" class="form-label">First name</label>
+                                <div class="input-field">
+                                    <span class="form-control icon"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                </div>
+                                <div class="invalid-feedback empty-fn">
+                                    Field is Required.
+                                </div>
+                                <div class="invalid-feedback num-and-spc-fn">
+                                    Numbers and special characters are not allowed.
+                                </div>
+                            </div>
+                            <div class="col-sm-6 input-container">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback empty-ln">
+                                    Last name is required.
+                                </div>
+                                <div class="invalid-feedback num-and-spc-ln">
+                                    Numbers and special characters are not allowed.
+                                </div>
+                            </div>
+                            <div class="col-12 input-container">
+                                <label for="userName" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <div class="input-field">
+                                        <span class="form-control icon">@</span>
+                                        <input type="text" class="form-control" id="userName" placeholder="Username"
+                                            required="">
+                                    </div>
+                                    <div class="invalid-feedback v-username">
+                                        Your username is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 input-container">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-field">
+                                    <span class="form-control icon"><i class="fas fa-envelope"
+                                            id="email-icon"></i></span>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                </div>
+                                <div class="invalid-feedback v-email">
+                                    Please enter a valid email address.
+                                </div>
+                                <div class="invalid-feedback empty-em">
+                                    Email is required.
+                                </div>
+                            </div>
+                            <div class="col-12 input-container">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select" id="country" required="">
+                                    <option value="0">Choose...</option>
+                                    <option value="1">United States</option>
+                                    <option value="2">India</option>
+                                </select>
+                                <div class="invalid-feedback v-country">
+                                    Please select a valid country.
+                                </div>
+                            </div>
+                            <div class="mb-3 input-container">
+                                <label for="mobile" class="form-label">Mobile:</label>
+                                <div class="input-field">
+                                    <span class="form-control icon"><i class="fas fa-phone" id="phone-icon"></i></span>
+                                    <input type="tel" class="form-control" id="mobile">
+                                </div>
+                                <div class="invalid-feedback v-mobile">
+                                    Please enter a valid phone number.
+                                </div>
+                                <div class="invalid-feedback empty-mob">
+                                    Phone number is required
+                                </div>
+                            </div>
+                            <div class="mb-3 input-container">
+                                <label for="InputPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="InputPassword">
+                            </div>
+                            <div class="mb-3 input-container">
+                                <label for="confirmInputPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmInputPassword">
+                                <div class="invalid-feedback ps">
+                                    Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.
+                                </div>
+                                <div class="invalid-feedback match">
+                                    Entered Passwords do not match.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <button class="w-100 btn btn-primary btn-create btn-lg" type="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="links">
+        <div class="link-sec">
+            <div class="comp-info">
+                <div class="comp-logo">
+                    <img src="RouteWise.png" alt="" />
+                </div>
+                <div class="comp-add">Sec B,Aliganj,Lucknow</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+        <div class="link-sec">
+            <div class="comp">
+                <h2 class="comp-head">Company</h2>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <div class="app">
+                    <h2 class="app-head">Download Our App</h2>
+                    <div class="app-image"></div>
+                </div>
+            </div>
+        </div>
+        <div class="link-sec">
+            <div class="get-start">
+                <h2>Get Started</h2>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <img src="facebook-svg.svg" alt="" />
+                </div>
+                <div class="icon">
+                    <img src="instagram-svg.svg" alt="" />
+                </div>
+                <div class="icon">
+                    <img src="twitter-svg.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="signup-script.js"></script>
+</body>
+</html>

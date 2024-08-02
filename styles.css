@@ -15,6 +15,7 @@ body {
     font-weight: 100;
     padding: 15px 50px;
     border-radius: 4.5vh;
+    cursor:pointer;
 }
 .navbar
 {
@@ -64,6 +65,7 @@ body {
     display: flex;
     align-items: center;
     list-style-type: none;
+    margin-bottom: 0;
 }
 .nav-items li{
     margin: 0 10px;
@@ -94,6 +96,11 @@ body {
     color: white;
     background-color: rgba(0, 112, 80, 1);
 }
+.btn-signin:hover{
+    background-color: transparent;
+    color: #007050;
+    border: 2px solid #007050;
+}
 .nav-items-vertical{
     height: 0;
     background-color: rgb(249,241,230);
@@ -118,6 +125,49 @@ body {
 .res-button-section{
     display: none;
 }
+/**SignIn Modal style**/
+.modal-content{
+    background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
+    color: #007050;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-field .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form-control{
+    outline: none;
+    background-color: rgb(249,241,230);
+}
+.input-field .icon{
+    height: 38px;
+    width: 30px;
+    color: rgb(235, 24, 59);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-container input:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/**main-content**/
 .main-content {
     width: 100%;
     height:100%;
@@ -163,10 +213,19 @@ body {
     color: white;
     background-color: rgba(1, 34, 65, 1);
 }
+.btn-demo:hover{
+    color: #012241;
+    background-color: #afd6f9;
+    border: 2px solid #012241;
+}
 .btn-signup{
     background-color: white;
     margin-right: 2vw;
     color: #012241;
+    border: 1px solid #012241;
+}
+.btn-signup:hover{
+    background-color:#afd6f9;
     border: 1px solid #012241;
 }
 .overlap-and-curved{
@@ -543,6 +602,7 @@ body {
     .nav-section-two{
         width: 351px;
         justify-content: flex-start;
+        align-items: center;
         margin-right: 20px;
     }
     .res-button-section{

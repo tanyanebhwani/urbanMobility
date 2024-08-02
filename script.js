@@ -26,3 +26,47 @@ svg.addEventListener('click', () => {
         menu.style.display = 'none';
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("Outside login form");
+    document.getElementsByClassName('login-form')[0].addEventListener('submit', async (event) => {
+        event.preventDefault();
+        let isValid = true;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('InputPassword').value;
+        // Check if all fields are filled
+        if (!username) {
+            isValid = false;
+            document.querySelector('.v-username').style.display = 'block';
+        }
+        if (!password) {
+            isValid = false;
+            document.querySelector('.v-pass').style.display = 'block';
+        }
+
+        if (isValid) {
+            console.log('listening');
+            // Proceed with form submission or further processing
+            try {
+                const response = await fetch('http://localhost:5000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ "userName":username, password })
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    // Handle success (e.g., save token, redirect to another page, etc.)
+                    localStorage.setItem('token', data.token);
+                    alert('Login successful!');
+                    window.location.href = '/home.html';
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during login. Please try again.');
+            }
+        }
+    });
+});

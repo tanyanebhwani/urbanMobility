@@ -1,70 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Mobility Planner</title>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Mobility Planner</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-      }
-      .map {
-        width: 100%;
-        height: 500px;
-      }
-      .location-input {
-        margin-bottom: 20px;
-      }
-      .mapboxgl-ctrl-geocoder {
-        width: 300px;
-      }
-      .mapboxgl-ctrl-geocoder input {
-        width: 100%;
-      }
-      .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input {
-        width: 100%;
-      }
-      .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--dropdown {
-        max-height: 300px;
-        overflow-y: auto;
-      }
-</style>
+
 <body>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
-      type="text/css"
-    />
-    <div class="location-input">
-        <h2>Route Planner</h2>
-        <form id="route-form">
-          <label for="start">Starting Point:</label>
-          <div id="start"></div>
-          <label for="end">Destination:</label>
-          <div id="end"></div>
-          <button type="button" id="calculate-route">Calculate Route</button>
-          <button type="button" id="save-favorite">Save as Favorite</button>
-          <p id="error-message" class="error-message"></p>
-        </form>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+    type="text/css" />
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-section">
+      <div class="nav-section-one">
+        <div class="nav-logo">
+          <img src="RouteWise.png" alt="" />
+        </div>
       </div>
-      <div class="map" id="map"></div>
-      <div class="route-info" id="route-info">
-        <h2>Route Information</h2>
-        <p id="distance"></p>
-        <p id="duration"></p>
+      <div class="nav-section-two">
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn btn-signin" class="btn btn-signin"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Sign In</button>
+        </div>
+        <div class="bar-svg">
+          <svg width="30px" fill="#00a274" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            stroke="#00a274">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>bars</title>
+              <path
+                d="M2 9.249h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0zM30 14.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0zM30 22.75h-28c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h28c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0z">
+              </path>
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
-    <div class="favorites-section">
-      <h2>Favorite Routes</h2>
-      <ul id="favorites-list"></ul>
+    <div class="nav-items-vertical">
+      <ul class="nav-list">
+        <li class="nav-item-vertical"><a href="">Home</a></li>
+        <li class="nav-item-vertical"><a href="">About</a></li>
+        <li class="nav-item-vertical"><a href="">Contact</a></li>
+        <li class="nav-item-vertical"><a href="">Help</a></li>
+      </ul>
     </div>
+    <div class="res-button-section">
+      <button class="btn btn-signup">Sign Up</button>
+      <button class="btn btn-signin" class="btn btn-signin"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal">Sign In</button>
+    </div>
+  </nav>
+  <main>
+    <div class="main-content">
+      <section class="mapSec">
+        <div id="map"></div>
+      </section>
+      <section class="inputClass">
+        <div class="location-input">
+          <h2 class="form-heading">Route Planner</h2>
+          <form class="route-form">
+            <div class="form-field start">
+              <label>Starting Point:</label>
+              <div class="start-text" id="start"></div>
+            </div>
+            <div class="form-field end">
+              <label>Destination:&nbsp;&nbsp;</label>
+              <div class="end-text" id="end"></div>
+            </div>
+            <div class="form-field route-buttons">
+              <button type="button" class="btn btn-calculate-route">
+                Calculate Route
+              </button>
+              <button type="button" class="btn btn-save-favorite">
+                Save as Favorite
+              </button>
+            </div>
+            <p id="error-message" class="error-message"></p>
+          </form>
+        </div>
+        <div class="route-info" id="route-info">
+          <h2>Route Information</h2>
+          <p id="distance"></p>
+          <p id="duration"></p>
+        </div>
+      </section>
+
+      <section>
+        <div class="post-section favorites-section">
+          <h2 class="post-head">Favorites Section</h2>
+          <div class="posts favorites">
+            <p>Click on 'Save to Favorites' to view favorites here.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="modal" tabindex="-1" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2 exclaim" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              <div>
+                Can't save to favorites
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>You need to login first.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign In</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="login-form">
+              <div class="form-content">
+                <div class="col-16 input-container">
+                  <label for="username" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <div class="input-field">
+                      <span class="form-control icon">@</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="Username"
+                        required=""
+                      />
+                    </div>
+                    <div class="invalid-feedback v-username">
+                      Your username is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 input-container">
+                  <label for="InputPassword" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputPassword"
+                  />
+                  <div class="invalid-feedback v-pass">
+                    Your password is invalid.
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-signin">Sign In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="links">
+    <div class="link-sec">
+      <div class="comp-info">
+        <div class="comp-logo">
+          <img src="RouteWise.png" alt="" />
+        </div>
+        <div class="comp-add">Sec B,Aliganj,Lucknow</div>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </div>
+    <div class="link-sec">
+      <div class="comp">
+        <h2 class="comp-head">Company</h2>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <div class="app">
+          <h2 class="app-head">Download Our App</h2>
+          <div class="app-image"></div>
+        </div>
+      </div>
+    </div>
+    <div class="link-sec">
+      <div class="get-start">
+        <h2>Get Started</h2>
+        <ul>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <img src="facebook-svg.svg" alt="" />
+        </div>
+        <div class="icon">
+          <img src="instagram-svg.svg" alt="" />
+        </div>
+        <div class="icon">
+          <img src="twitter-svg.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">Copyright | All rights reserved @2024</div>
+  </footer>
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  <script src="home.js"></script>
 </body>
 </html>
