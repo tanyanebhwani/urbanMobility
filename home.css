@@ -1,81 +1,133 @@
-body{
-    background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
-}
-.navbar{
-    position: relative;
-}
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 900px;
-}
-.contact-form{
-    background-color: #febfcc;
-    width: 80%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.form-details{
-    color: #00a274;
-    height: 820px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.input-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.input-field{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.input-field .form-control {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.form-control{
-    outline: none;
-    background-color: rgb(249,241,230);
-    width: 100%;
-}
-.input-field .icon{
-    height: 38px;
-    width: 30px;
-    color: rgb(235, 24, 59);
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.input-container input:focus {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.btn-create{
-    color: white;
-    background-color: #00a274;
-}
-@media (max-width: 785px) {
-    .form-details{
-        width: 90%;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: auto;
   }
-  @media (max-width: 578px) {
-    .contact-form{
-        height: 900px;
-    }
+  section{
+    display: flex;
+    height: 120vh;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10px;
+  }
+  .inputClass{
+    height: 40vh;
+  }
+  .mapSec{
+    height: 400px;
+  }
+  #map{
+    width: 100%;
+    height: 400px;
+  }
+  .location-input{
+    color: #00a274;
+    background-color: #febfcc;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 30px;
+  }
+  .route-info{
+    width: 50%;
+  }
+  .form-heading{
+    color: #00a274;
+    font-size: 1.85rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .route-form{
+    height: 70%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .form-field{
+    font-size: 1.20rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .text{
+    border: 1px solid #febfcc;
+    font-size: 1rem;                                                                       
+    width: 65%;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(249,241,230);
+  }
+  .route-buttons{
+    justify-content: center;
+  }
+  .btn-calculate-route{
+    background-color: #00a274;
+    border: none;
+    color:white;
+    margin-right: 20px;
+  }
+  .btn-save-favorite{
+    background-color: transparent;
+    color: #012241;
+    border: 2px solid #012241;
+  }
+  #route-info{
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    background-color: #00a274;
+    color: white;
+    border-radius: 10px;
+  }
+  #route-info h2{
+    text-align: center;
+  }
+  #route-info p{
+    margin-left: 40px;
+  }
+  #loginModal{
+    background-color: linear-gradient(90deg, #FEBFCC, #007050);
+  }
+  .favorites-section{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .favorites{
+    width: 80%;
+    height: 50%;
+  }
+  .modal-header{
+    display: flex;
+  }
+  .exclaim{
+    height: 50px;
+    width: 50px;
+  }
+  .favorites-section{
+    height: 100vh;
+  }
+  .favorites{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+  }
+  .fav-item{
+    width: 80%;
+    height: 200px;
   }
