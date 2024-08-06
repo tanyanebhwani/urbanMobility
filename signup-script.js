@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
     phoneInput.addEventListener('blur', function () {
         phoneIcon.classList.remove('fa-phone-volume');
     });
+    document.getElementsByClassName('btn-signup')[0].addEventListener('click',()=>{
+        window.location.href = '\signup.html';
+    })
 });
 document.getElementsByClassName('needs-validation')[0].addEventListener('submit', async (event) => {
     console.log('listening');

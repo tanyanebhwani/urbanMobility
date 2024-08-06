@@ -1,7 +1,6 @@
 svg = document.getElementsByTagName('svg')[0];
 menu = document.getElementsByClassName('nav-list')[0];
 menuBlock = document.getElementsByClassName('nav-items-vertical')[0];
-bannerText = document.getElementsByClassName('banner-text')[0];
 rotate = 0;
 svg.addEventListener('click', () => {
     console.log('I am listening');
@@ -12,13 +11,11 @@ svg.addEventListener('click', () => {
         menu.style.display = 'block';
         menuBlock.style.height = '150px';
         menuBlock.style.width = "100%";
-        bannerText.style.height = '60vh';
     }
     else if (rotate == 1) {
         svg.style.rotate = '0deg';
         rotate = 0;
         menuBlock.style.height = '0';
-        bannerText.style.height = '80vh';
         menu.style.display = 'none';
     }
 });

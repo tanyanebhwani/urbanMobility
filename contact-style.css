@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+ width: 100vw;
+}
+
+#page1{
+    height: 900px;
+    background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-head{
+    color: #012241;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.heading-text{
+    color: #00a274;
+    font-weight: 300;
+}
+.form-head{
+    color: #c23b56;
+}
+.form-section{
+    width: 60%;
+    height: 600px;
+    margin: auto;
+    background-color: white;
+    border: 2px solid #febfcc;
+}
+.form-text h3{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.form-text h1{
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.form-text p{
+    text-align: center;
+    font-weight: 700;
+}
+
+.form{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.form-control{
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    padding: 10px 30px;
+    font-size: 0.75rem;
+    margin: 20px 0;
+}
+
+.form .form-control::placeholder {
+    color: #d08c9a; /* Change to your desired color */
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 1rem;
+}
+
+.btn-submit{
+    margin: 20px 0;
+    border: none;
+    background-color: #00a274;
+    width: 70%;
+    margin-bottom: 50px;
+}
+.messages{
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Message{
+    height: 40%;
+}
+#span-button{
+    font-size: 1.25rem;
+    margin: 30px 0;
+    padding: 5px 20px;
+    background-color: #febfcc;
+    border-radius: 10px;
+    color: #ce7171;
+    border: none;
+}
+
+#page2{
+    background-color: rgb(249,241,230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-head{
+    color: #00a274;
+    font-weight: 300;
+}
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+.containers{
+    padding-top: 10px;
+    width: 100%;
+    height:80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.inner-container{
+    width: 31%;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(254,254,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow 0.3s ease-in-out
+}
+
+
+.inner-container:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.inner-container a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: 700;
+}
+
+#emailIcon{
+    color: rgb(235,24,59);
+}
+
+#whatsapp{
+    color: rgb(235,24,59);
+}
+
+#location{
+    color: rgb(235,24,59);
+}
+
+.inner-container i{
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 1237px){    
+    .contact-head{
+        font-size: 2rem;
+    }
+    #span-button{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1065px){
+    .form-text h1{
+        font-size: 2rem;
+    }
+    .form-head{
+        font-size: 1.5rem;
+    }
+    .btn-submit{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 976px) {
+    .contact-head{
+        font-size: 1.5rem;
+    }
+    .containers {
+        flex-direction: column;
+        align-items: center;
+    }
+    .inner-container {
+        width: 90%;
+        height: 150px;
+    }
+    #page2{
+        height: 130vh;
+    }
+}
+@media (max-width: 742px) {
+    .contact-head{
+        font-size: 1.25rem;
+        width: 90%;
+    }
+}
+@media (max-width: 576px) {
+    .form-section{
+        width: 80%;
+    }
+}
+@media (max-width: 685px) {
+    .form-text h1{
+        font-size: 1.75rem;
+        width: 95%;
+        margin: auto;
+    }
+    .form-head{
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 436px) {
+    .user-head{
+        font-size: 0.75rem;
+    }
+    .form-text h1{
+        font-size: 1.5rem;
+        width: 95%;
+        margin: auto;
+    }
+    .form-head{
+        font-size: 1rem;
+    }
+    .form-control{
+        font-size: 0.7rem;
+    }
+}

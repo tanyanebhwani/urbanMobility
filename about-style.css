@@ -1,0 +1,293 @@
+/* Mission Section */
+.nav-items{
+    margin-top: 0;
+}
+.mission{
+    display: flex;
+}
+.mission-section {
+    height: 800px;
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mission-section h1 {
+    font-size: 2.5rem;
+    color: #007050;
+}
+.mission-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+.mission-banner-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #59a18c;
+}
+.mission-banner-image img
+{
+    width: 600px;
+    height: 600px;
+}
+
+/* Team Section */
+.team-section {
+    padding: 50px;
+    background-color: rgb(249,241,230);
+    text-align: center;
+}
+.team-section h1 {
+    font-size: 2.5rem;
+    color: #007050;
+    margin-bottom: 30px;
+}
+.team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.team-card {
+    background: #ffffff;
+    border: 2px solid #febfcc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.team-card-body {
+    padding: 20px;
+    text-align: center;
+}
+.team-card-body h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #007050;
+}
+.team-card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.team-post{
+    font-size: 1.25rem;
+    color: #febfcc;
+}
+/* Timeline Section */
+.timeline-section{
+    min-height: 950px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeline-section-content{
+    width: 40%;
+    min-height: 800px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+/* Timeline Item Animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease-out, transform 6s ease-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-section-content h1 {
+    font-size: 2.5rem;
+    color: #007050;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 3px solid #007050;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #007050;
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: #007050;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #333;
+}
+.links{
+    min-height: 600px;
+}
+/* CSS Animations */
+.slide-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Additional Styles */
+.mission-section p{
+    width: 50%;
+}
+
+.mission-banner-image img {
+    width: 40vw;
+    height: 80vh;
+}
+
+.banner-image img.visible {
+    transform: translateX(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1054px) {
+    .mission{
+        flex-direction: column;
+    }
+    .mission-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mission-banner-image{
+        width: 100%;
+    }
+}
+@media (max-width: 942px) {
+    .navbar{
+        position: relative;
+    }
+    .nav-section-two{
+        height: 68px;
+    }
+}
+@media (max-width: 596px) {
+    .mission-section{
+        text-align: justify;
+    }
+}
+@media (max-width: 768px) {
+    .banner-image img {
+        width: 100%; /* Ensures the image takes up the full width on smaller screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-section h1{
+        font-size: 1.5rem;
+    }
+    .mission-section p{
+        font-size: 1rem;
+    }
+    .mission-section{
+        height: 100vh;
+    }
+    .banner-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    .mission-banner-image img{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-banner-image img{
+        height: 30vh;
+    }
+    .mission-section h1 {
+        font-size: 2rem;
+    }
+    .mission-section p {
+        font-size: 1rem;
+    }
+    .team-card-body h3 {
+        font-size: 1.25rem;
+    }
+    .team-card-body p {
+        font-size: 0.9rem;
+    }
+    .timeline-item h3 {
+        font-size: 1.25rem;
+    }
+    .timeline-item p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 369px) {
+    .mission-section{
+        height: 120vh;
+    }
+}
+@media (max-width: 663px) {
+    .mission-banner-image img{
+        height: 40vh;
+    }
+}

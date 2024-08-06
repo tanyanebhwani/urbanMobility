@@ -26,7 +26,9 @@
                     <li><a href="help.html">Help</a></li>
                 </ul>
                 <div class="nav-buttons">
-                    <button class="btn btn-signin">Sign In</button>
+                    <button class="btn btn-signin" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Sign In</button>
                 </div>
                 <div class="bar-svg">
                     <svg width="30px" fill="#00a274" viewBox="0 0 32 32" version="1.1"
@@ -53,10 +55,51 @@
         </div>
         <div class="res-button-section">
             <button class="btn btn-signup">Sign Up</button>
-            <button class="btn btn-signin">Sign In</button>
+            <button class="btn btn-signin" 
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Sign In</button>
         </div>
     </nav>
     <main>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign In</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="login-form">
+                            <div class="form-content">
+                                <div class="col-16 input-container">
+                                    <label for="username" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                        <div class="input-field">
+                                            <span class="form-control icon">@</span>
+                                            <input type="text" class="form-control" id="username" placeholder="Username"
+                                                required="" />
+                                        </div>
+                                        <div class="invalid-feedback v-username">
+                                            Your username is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 input-container">
+                                    <label for="InputPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="InputPassword" />
+                                    <div class="invalid-feedback v-pass">
+                                        Your password is invalid.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-signin">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="contact-form">
             <div class="form-details">
                 <div class="col-md-7 col-lg-8">
@@ -147,7 +190,8 @@
                                 <label for="confirmInputPassword" class="form-label">Confirm Password</label>
                                 <input type="password" class="form-control" id="confirmInputPassword">
                                 <div class="invalid-feedback ps">
-                                    Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.
+                                    Password must be at least 8 characters long, contain at least one uppercase letter,
+                                    one lowercase letter, one number, and one special character.
                                 </div>
                                 <div class="invalid-feedback match">
                                     Entered Passwords do not match.
@@ -216,4 +260,5 @@
         crossorigin="anonymous"></script>
     <script src="signup-script.js"></script>
 </body>
+
 </html>
