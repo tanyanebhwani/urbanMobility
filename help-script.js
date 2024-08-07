@@ -1,8 +1,9 @@
 svg = document.getElementsByTagName('svg')[0];
 menu = document.getElementsByClassName('nav-list')[0];
 menuBlock = document.getElementsByClassName('nav-items-vertical')[0];
-navBar = document.getElementsByClassName('navbar')[0];
-bannerText = document.getElementsByClassName('banner-text')[0];
+navBar = document.getElementsByClassName('navbaritem')[0];
+faqItem = document.getElementsByClassName('accordion-item');
+faqButton = document.getElementsByClassName('accordion-button');
 rotate = 0;
 
 svg.addEventListener('click', () => {
@@ -15,7 +16,6 @@ svg.addEventListener('click', () => {
         menuBlock.style.height = '150px';
         menuBlock.style.width = "100%";
         navBar.style.position = 'relative';
-        bannerText.style.height = '60vh';
     }
     else if (rotate == 1) {
         svg.style.rotate = '0deg';
@@ -23,19 +23,15 @@ svg.addEventListener('click', () => {
         console.log("rotate = 0");
         menuBlock.style.height = '0';
         navBar.style.position = 'absolute';
-        bannerText.style.height = '80vh';
         menu.style.display = 'none';
     }
 });
-$(document).ready(function() {
-    $('.reply-button').click(function() {
-        $(this).siblings('.reply-form').toggle();
-      });
+faqItem[0].style.borderTopLeftRadius  = '20px';
+faqItem[0].style.borderTopRightRadius  = '20px';
+faqItem[14].style.borderBottomLeftRadius  = '20px';
+faqItem[14].style.borderBottomRightRadius  = '20px';
 
-      $('.send-reply').click(function() {
-        const replyText = $(this).siblings('textarea').val();
-        alert('Reply sent: ' + replyText);
-        $(this).parent('.reply-form').hide();
-        $(this).siblings('textarea').val('');
-      });
-    });
+faqButton[0].style.borderTopLeftRadius  = '20px';
+faqButton[0].style.borderTopRightRadius  = '20px';
+faqButton[14].style.borderBottomLeftRadius  = '20px';
+faqButton[14].style.borderBottomRightRadius  = '20px';

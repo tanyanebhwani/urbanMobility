@@ -69,7 +69,7 @@
     margin: 20px 0;
 }
 
-.form .form-control::placeholder {
+.form input::placeholder {
     color: #d08c9a; /* Change to your desired color */
     font-family: "Baloo Bhaina 2", sans-serif;
     font-size: 1rem;
@@ -92,6 +92,9 @@
 }
 #Message{
     height: 40%;
+    color: #d08c9a;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 1rem;
 }
 #span-button{
     font-size: 1.25rem;

@@ -1,625 +1,114 @@
 /* General Styles */
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-body {
-
-  font-family: "Baloo Bhaina 2", sans-serif;
-  margin: 0;
-  padding: 0;
+#faq{
+  background: rgb(249,241,230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contactpage {
-  /* margin: 0;
-  padding: 0; */
-  background-color: rgb(249,241,230);
-}
-
 .container {
-  width: 80%;
-  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 95%;
+  height: 100%;
 }
-.btn{
-  font-size: 1rem;
-  font-weight: 100;
-  padding: 15px 50px;
-  border-radius: 4.5vh;
+.container{
+  margin: 100px 0;
+  padding: 120px;
+  background-color: #007050;
 }
-
-.btn-signin{
-  margin-top: 0;
-  margin-right: 2vw;
+.faq-heading{
+  font-size: 3rem;
   color: white;
-  background-color: rgba(0, 112, 80, 1);
-  width:13vw;
-  font-weight:400;
-
-}
-.navbar
-{
-
-  background-color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 200;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-  
-}
-.nav-section
-{
-    position: relative;
-    height: 96px;
-    width: 85%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-.nav-logo img
-{
-    height: 100px;
-}
-.nav-section-one
-{
-    height: 100%;
-    width: 20%;
-    margin-right: 20%;
-}
-.nav-section-two{
-    position: sticky;
-    z-index:100;
-    top: 10px;
-    width: 70%;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
-    border-radius: 35px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.nav-items{
-    width: 60%;
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-}
-.nav-items li{
-    margin: 0 10px;
-}
-.nav-items li a{
-    text-decoration: none;
-    color: black;
-}
-.nav-buttons{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.bar-svg{
-    display: flex;
-    height: 47px;
-    width: 51px;
-    border: 2px solid #00a274;
-    border-radius: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-items-vertical{
-    height: 0;
-    background-color: rgb(249,241,230);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: height 2s;
-}
-.nav-list{
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-}
-.nav-item-vertical{
-    margin: 5px 0;
-}
-.nav-item-vertical a{
-    color: #00a274;
-    text-decoration: none;
-}
-.res-button-section{
-    display: none;
-}
-.btn-signup{
-  background-color: white;
-  margin-right: 2vw;
-  color: #012241;
-  border: 1px solid #012241;
-}
-.btn-signup:hover{
-  background-color: #0056b3;
- color: black;
-}
-@media only screen and (max-width:1240px){
-  .btn-signin{
-    margin-top: 0;
-    margin-right: 2vw;
-    color: white;
-    background-color: rgba(0, 112, 80, 1);
-    width:10vw;
-    font-weight:400;
-    height:8vh;
-  
-  }
-}
-
-@media only screen and (max-width:950px){
-  .btn{
-    font-size: 1rem;
-    font-weight: 100;
-    padding: 15px 50px;
-    border-radius: 4.5vh;
-  }
-  
-  .btn-signin{
-    width:100%;
-    margin-top: 0;
-    margin-right: 2vw;
-    color: white;
-    background-color: rgba(0, 112, 80, 1);
-  }
-
-}
-@media only screen and(max-width:700px){
-  .accordion{
-    width:100%;
-  }
-  form{
-    width:100%;
-  }
-}
-/* FAQ Section */
-#faq {
-  padding-top:30vh;
-  font-size: 20px;
-  width: 100%;
-}
-@media only screen and (max-width:964px){
-  #faq {
-    padding-top: 40vh;
-    font-size: 18px;
-  }
+  margin-bottom: 50px;
 }
 .faq-section {
   padding: 2rem 0;
-  background-color: lightcoral;
   width: 100%;
-  padding-left:4vw;
 }
-
-.faq-section h2 {
-  padding-top: 1.2vh;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.accordion {
-  width: 90%;
-  color: #037a59;
-  border: 1px solid #ddd;
-  /* border-radius: 2px; */
-  background-color: rgb(235, 136, 152);
-  padding: 1vh;
-  border-radius: 17px;
-
-}
-.FAQ{
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-.faqAccordion{
+.faq-accordion {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  border-radius: 20px;
 }
-.card{
-padding: 0;
+.accordion-item{
+  width: 95%;
+  background-color: white;
 }
-.card-header{
-  padding: 0;
+.accordion-button{
+  background-color: white;
+  border: 2px solid #007050;
+  color: #007050;
+  padding: 40px;
+  font-size: 1.75rem;
 }
-.accordion button {
-  width: 100%;
-  margin: 0;
-  padding:1.5rem;
-  text-align: left;
-  border: blue;
-  color: white;
-  background-color:rgb(4, 4, 54);
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  
-
+.accordion-collapse{
+  color: #007050;
+  border: 2px solid #007050;
+  padding: 20px 20px;
+  font-size: 1.5rem;
 }
-
-.accordion button:hover {
-  background-color: #037a59;
-  color:black;
-}
-
-.card-body{
-  background-color:rgb(249,241,230);
-}
-.reply-button btn btn-secondary mt-2 {
-  background-color:rgb(11, 240, 228);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 2px;
-  margin-top: 1rem;
-}
-
-.reply-button:hover {
-  background-color:lightskyblue;
-}
-
-.reply-form {
-  display: none;
-  margin-top: 1rem;
-}
-
-.reply-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.send-reply {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 0.5rem;
-}
-
-.send-reply:hover {
-  background-color: #218838;
-}
-.container{
-  padding-left: 18px;
-}
-
 /* Contact Support Section */
-.contact {
-  padding-top: 10vh;
-  padding: 2rem 0;
-  padding-bottom: 3rem;
+#contact{
+  background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
+  height: 180vh;
   display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-.contact-section {
-  /* padding-left: 5vw; */
-  padding-bottom: 2vh;
-  
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.contact-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 40px;
-  padding: 2vh;
+.contact-heading{
+  font-size: 4rem;
+  font-weight: 300;
+  padding-bottom: 40px;
+  color: #ed143f;
 }
-.CS {
-  /* height: 80vh; */
-  width: 72vw;
-  padding-bottom:50px;
-  /* padding-left:29px; */
+.contact-section-content{
+  background-color: #febfcc;
+  border: none;
+  border-radius: 20px;
+  width: 70%;
+  height: 800px;
+  padding-bottom: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
 }
-
-form {
-  width:92%;
-  color: rgb(2, 20, 2);
-  font-size: 20px;
-  margin: 0;
-  padding-left: 15vh;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 2px;
-  border: 1.7vh solid;
-  border-color: rgb(238, 141, 157);
-  border-radius: 17px;
-  background-color: antiquewhite;
+.contact-form {
+  width: 90%;
+  height: 80%;
+  color: #007050;
+  font-size: 1.25rem;
 }
-
 .form-group {
-  font-size: 20px;
-  color: rgb(2, 24, 2);
+  margin-bottom: 30px;
 }
-
+.form-control{
+  padding: 10px 0;
+}
 label {
   display: block;
-  font-size: 20px;
-  color: rgb(1, 26, 1);
-  padding: auto;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  margin-bottom: 5px;
 }
-.form-group label {
-  color: green;
+textarea{
+  margin-bottom: 20px;
 }
-.user-name {
-  height: 30px;
-  border: 3px solid #037a59;
-}
-
-input,
-textarea {
+.btn-ask{
+  background-color: #00a274;
   width: 100%;
-  padding: 0.5rem;
-  border: 3px solid #037a59;
-  border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
-
-button {
-  display: inline-block;
-  width: 100%;
-  padding: 0.75rem;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-.final{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.final button {
-  font-size:20px ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 35px;
-  height: 8.2vh;
-  width: 16vw;
-  color: white;
-  background-color: rgba(0, 112, 80, 1);
-}
-.final button:hover {
-  background-color: #0056b3;
-}
-@media only screen and (max-width:600px) {
-
-  .final button{
-    height: 8.2vh;
-  width: 25vw;
-  }
-}
-
-
 .links{
-  background-color: #012241;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  color: white;
-  height: 80vh;
-}
-.link-sec{
-  margin-top: 15vh;
-  width: 15vw;
-}
-.link-sec ul{
-  padding: 0;
-}
-.link-sec ul li{
-  list-style-type: none;
-}
-.link-sec ul li a{
-  text-decoration: none;
-  color: white;
-}
-.comp-logo{
-  height: 100px;
-  width: 100px;
-  margin-bottom: 10px;
-}
-.comp-info img{
-  height: 100%;
   width: 100%;
 }
-.app-head{
-  margin-bottom: 0;
+.footer-and-links{
+  width: 100%;
 }
-.app-image{
-  margin-top: 0;
-  padding-top: 0;
-  height: 70px;
-  width: 200px;
-  background: url("app-image.png");
-  background-repeat: no-repeat;
-  background-position: 0px 5px;
-  border-radius: 10px;
-  background-size: contain;
-}
-.icons{
-  margin-top: 100px;
-  display: flex;
-}
-.iconic{
-  border-radius: 50%;
-  margin-right: 5px;
-  border: 2px solid white;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.iconic img{
-  height: 40px;
-}
-.footer{
-  height: 70px;
-  background-color: rgb(249,241,230);
-  color: #00a274;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/**Media Queries**/
-@media only screen and(max-width:632px){
-  .links{
-    font-size:20px;
-  }
-}
-@media only screen and (max-width: 1350px){
-  .app-image{
-      width: 159px;
-  }
-  .iconic{
-      width: 41px;
-      height:39px;
-  }
-  .link-sec{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  }
-  .comp-info{
-      display: none;
-  }
-}
-@media only screen and (max-width: 940px) {
-  .nav-buttons{
-      display: none;
-  }
-  .navbar{
-    
-      align-items: center;
-      flex-direction: column;
-  }
-  .nav-logo{
-      margin-left: 50px;
-  }
-  .nav-section-one{
-      margin-right: 0;
-  }
-  .nav-section{
-      width: 100%;
-      margin-top: 15px;
-      height: 50%;
-      justify-content: space-between;
-  }
-  .nav-section-two{
-      width: 351px;
-      justify-content: flex-start;
-      margin-right: 20px;
-  }
-  .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .res-button-section{
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #febfcc;
-      width: 100%;
-  }
-
-.btn-signup{
-  margin-right: 9vw;
-}
-}
-@media only screen and (max-width: 847px) {
-  .nav-items li{
-      margin: 0 10px;
-  }
-}
-@media only screen and (max-width: 630px)
-  {
-    .nav-items{
-        display:none;
-    }
-    .nav-section-two{
-        width: 70px;
-        justify-content: center;
-    }
-    .bar-svg{
-        display: flex;
-    }
-    .icons{
-      display: none;
-  }
-  }
-  @media only screen and (max-width: 555px){
-    .nav-section-two{
-        height: 50%;
-        width: 40px;
-    }
-    .nav-logo{
-        margin-left: 20px;
-    }
-    .bar-svg{
-        height: 35px;
-        width: 35px;
-    }
-    .bar-svg svg{
-        width: 25px;
-    }
-    .app{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .app-image{
-      width: 48px;
-      height: 51px;
-      background-size: cover;
-      border-radius: 50%;
-      background-position: 10px 0;
-      background-color: white;
-  }
-  }
-  @media only screen and (max-width: 421px){
-    
-    .btn-signin{
-        padding: 12px 30px;
-        margin-right: 20px;
-    }
-    .btn-signup{
-        padding: 12px 30px;
-        margin-left: 20px;
-    }
-    .res-button-section{
-        justify-content: space-between;
-    }
-  }
