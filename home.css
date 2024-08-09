@@ -7,13 +7,12 @@ body {
 }
 section{
   display: flex;
-  height: 120vh;
   align-items: center;
   justify-content: center;
   margin: 30px 10px;
 }
 .inputClass{
-  height: 40vh;
+  height: 50vh;
 }
 .mapSec{
   height: 400px;
@@ -30,6 +29,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   margin: 0 30px;
 }
@@ -52,10 +52,29 @@ section{
 }
 .form-field{
   font-size: 1.20rem;
-  width: 90%;
+  width: 70%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.route-buttons{
+  width: 90%;
+}
+#start{
+  color: #f90a3a;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+#end{
+  margin-left: 20px;
+  font-size: 1rem;
+  color: #f90a3a;
+}
+.start-text{
+  padding-right: 0;
+}
+.end-text{
+  padding-right: 0;
 }
 .text{
   border: 1px solid #febfcc;
@@ -65,17 +84,34 @@ section{
   border-radius: 10px;
   background-color: rgb(249,241,230);
 }
-.route-buttons{
-  justify-content: center;
-}
 .btn-calculate-route{
   background-color: #00a274;
   border: none;
   color:white;
-  margin-right: 20px;
+}
+.btn-calculate-route:hover{
+  color: #00a274;
+  border: 2px solid #00a274;
+  background-color: transparent;
+}
+.btn-calculate-route:focus{
+  color: #00a274;
+  border: 2px solid #00a274;
+  background-color: transparent;
 }
 .btn-save-favorite{
   background-color: transparent;
+  color: #012241;
+  border: 2px solid #012241;
+  margin-right: 15px;
+}
+.btn-save-favorite:hover{
+  background-color: #adc5db;
+  color: #012241;
+  border: 2px solid #012241;
+}
+.btn-save-favorite:focus{
+  background-color: #adc5db;
   color: #012241;
   border: 2px solid #012241;
 }
@@ -94,19 +130,30 @@ section{
 #route-info p{
   margin-left: 40px;
 }
+.error-message{
+  display: none;
+}
 #loginModal{
   background-color: linear-gradient(90deg, #FEBFCC, #007050);
 }
+.post-section{
+  height: auto;
+}
+.posts{
+  height: auto;
+}
+.post-head{
+  margin-bottom: 20px;
+  color: #d993a1;
+}
 .favorites-section{
+  padding: 120px 90px 120px 90px;
+  border-radius: 20px;
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.favorites{
-  width: 80%;
-  height: 50%;
 }
 .modal-header{
   display: flex;
@@ -115,19 +162,52 @@ section{
   height: 50px;
   width: 50px;
 }
-.favorites-section{
-  height: 100vh;
-}
 .favorites{
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 30px 50px;
   display: flex;
   flex-direction: column;
-  height: 60%;
   align-items: center;
   justify-content: center;
 }
 .fav-item{
-  width: 80%;
-  height: 200px;
+  margin: 20px 0;
+  height: 250px;
+}
+.btn-del{
+  padding: 15px 50px;
+  background-color: #d993a1;
+}
+.btn-del:hover{
+  color: #d993a1;
+  background-color: transparent;
+  border: 2px solid #d993a1;
+}
+.btn-view{
+  padding: 15px 50px;
+  background-color: #00a274;
+  color: white;
+}
+.btn-view:hover{
+  color: #00a274;
+  background-color: transparent;
+  border: 2px solid #00a274;
+}
+.btn-reset-form{
+  background-color: #f90a3a;
+  color: white;
+}
+.btn-reset-form:hover{
+  background-color: transparent;
+  color: #f90a3a;
+  border: 2px solid #f90a3a;
+}
+.btn-reset-form:focus{
+  background-color: transparent;
+  color: #f90a3a;
+  border: 2px solid #f90a3a;
+}
+.button-sec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

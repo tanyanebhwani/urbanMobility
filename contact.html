@@ -64,14 +64,97 @@
       </button>
     </div>
   </nav>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal" tabindex="-1" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div
+            class="modal-heading log-in"
+            role="alert"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-check-circle-fill flex-shrink-0 me-2"
+              viewBox="0 0 16 16"
+              role="img"
+              aria-label="Success:"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.002 11.536l6.536-6.537L11.123 4 6 9.122 4.878 8 3.757 9.122 6.002 11.536z"
+              />
+            </svg>
+            <div>Login Successful!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" id="loginNotModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div
+            class="modal-heading log-not"
+            role="alert"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-x-circle-fill flex-shrink-0 me-2"
+              viewBox="0 0 16 16"
+              role="img"
+              aria-label="Failure:"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.646 4.646a.5.5 0 1 0-.707.708l2.147 2.146-2.147 2.147a.5.5 0 1 0 .707.707l2.146-2.147 2.147 2.147a.5.5 0 1 0 .707-.707L8.207 7.5l2.146-2.146a.5.5 0 0 0-.707-.707L7.5 6.793 5.354 4.646z"
+              />
+            </svg>
+            <div class="log-not-heading">Failure to login.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Sign In</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
-        <div class="modal-body" id="exampleModal">
+        <div class="modal-body">
           <form class="login-form">
             <div class="form-content">
               <div class="col-16 input-container">
@@ -79,7 +162,13 @@
                 <div class="input-group has-validation">
                   <div class="input-field">
                     <span class="form-control icon">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required="" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      placeholder="Username"
+                      required=""
+                    />
                   </div>
                   <div class="invalid-feedback v-username">
                     Your username is required.
@@ -88,7 +177,11 @@
               </div>
               <div class="mb-3 input-container">
                 <label for="InputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="InputPassword" />
+                <input
+                  type="password"
+                  class="form-control"
+                  id="InputPassword"
+                />
                 <div class="invalid-feedback v-pass">
                   Your password is invalid.
                 </div>

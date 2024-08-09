@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let isValid = true;
         const username = document.getElementById('username').value;
         const password = document.getElementById('InputPassword').value;
-        // Check if all fields are filled
+        const exampleModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
         if (!username) {
             isValid = false;
             document.querySelector('.v-username').style.display = 'block';
@@ -50,25 +50,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 const data = await response.json();
                 if (response.ok) {
                     // Handle success (e.g., save token, redirect to another page, etc.)
-                    localStorage.setItem('token', data.token);
-                    alert('Login successful!');
+                    localStorage.setItem('auth-token', data.token);
+                    console.log('Login successful');
+                    exampleModal.hide();
+                    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                    console.log(loginModal);
+                    console.log(exampleModal);
+                    document.getElementsByClassName('log-in')[0].style.color = '#007050';
+                    loginModal.show();
                     window.location.href = '/home.html';
                 } else {
-                    alert(`Error: ${data.message}`);
+                    console.log(exampleModal);
+                    console.log("error:\t",data.message);
+                    exampleModal.hide();
+                    const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));
+                    console.log(document.getElementById('loginNotModal'));
+                    loginNotModal.show();
+                    document.getElementsByClassName('log-not')[0].style.color = '#e85a76';
+                    document.getElementsByClassName('log-not-heading')[0].textContent = 'Invalid email or password';
+                    console.log(document.getElementsByClassName('log-not-heading')[0].textContent); 
                 }
             } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred during login. Please try again.');
+                console.log(exampleModal);
+                console.log('Error:', error);
+                exampleModal.hide();
+                const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));
+                document.getElementsByClassName('log-not')[0].style.color = '#e85a76';
+                document.getElementsByClassName('log-not-heading')[0].textContent = 'Failed to login. Try again after some time.';                
+                loginNotModal.show();
             }
         }
-    });
-    document.getElementsByClassName('btn-signup')[0].addEventListener('click',()=>{
-        window.location.href = '\signup.html';
-    });
-    document.getElementsByClassName('btn-signup')[1].addEventListener('click',()=>{
-        window.location.href = '\signup.html';
-    });
-    document.getElementsByClassName('btn-demo')[0].addEventListener('click',()=>{
-        window.location.href = '\home.html';
     });
 });

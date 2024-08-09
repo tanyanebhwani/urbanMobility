@@ -12,7 +12,7 @@ body {
 }
 .btn{
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 200;
     padding: 15px 50px;
     border-radius: 4.5vh;
     cursor:pointer;
@@ -441,7 +441,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     color: white;
-    height: 60vh;
+    padding: 100px 0;
 }
 .link-sec{
     margin-top: 20vh;
@@ -502,6 +502,20 @@ footer{
     height: 70px;
     background-color: rgb(249,241,230);
     color: #00a274;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+#signupNotModal .modal-heading{
+    font-size: 1rem;
+}
+.modal-header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -596,6 +610,7 @@ footer{
         position: relative;
         align-items: center;
         flex-direction: column;
+        padding-bottom: 0;
     }
     .nav-logo{
         margin-left: 50px;

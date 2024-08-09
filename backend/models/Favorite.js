@@ -6,6 +6,28 @@ const favoriteSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+  startCoordinates: {
+    type: {
+        type: String,
+        enum: ['Point'],
+        default: 'Point',
+    },
+    coordinates: {
+        type: [String],  // Array of numbers: [longitude, latitude]
+        required: true,
+    }
+},
+endCoordinates: {
+    type: {
+        type: String,
+        enum: ['Point'],
+        default: 'Point',
+    },
+    coordinates: {
+        type: [String],  // Array of numbers: [longitude, latitude]
+        required: true,
+    }
+},
   startLocation: {
     type: String,
     required: true

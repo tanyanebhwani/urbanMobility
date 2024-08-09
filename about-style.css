@@ -190,6 +190,11 @@
     transform: translateX(0);
 }
 
+.success-icon{
+    color: #ba0404;
+    width: 100px;
+    height: 100px;
+}
 
 /* Responsive Design */
 @media (max-width: 1054px) {
