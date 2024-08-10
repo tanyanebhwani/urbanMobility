@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidGFudGhldGEtMTIzIiwiYSI6ImNsejBzc2wxcDJnZGUyanFyeTA1dzJ6YnAifQ.wkCHiKJTFrer8wOsOpR3uQ';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://urbanmobility.onrender.com';
 let map;
 let startLoc;
 let endLoc;
