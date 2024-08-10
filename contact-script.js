@@ -3,7 +3,6 @@ menu = document.getElementsByClassName('nav-list')[0];
 menuBlock = document.getElementsByClassName('nav-items-vertical')[0];
 rotate = 0;
 svg.addEventListener('click', () => {
-    console.log('I am listening');
     if (rotate == 0) {
         svg.style.rotate = '90deg';
         rotate = 1;
@@ -20,7 +19,6 @@ svg.addEventListener('click', () => {
     }
 });
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("Outside login form");
     document.getElementsByClassName('login-form')[0].addEventListener('submit', async (event) => {
         event.preventDefault();
         let isValid = true;
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (isValid) {
-            console.log('listening');
             // Proceed with form submission or further processing
             try {
                 const response = await fetch('https://urbanmobility.onrender.com/api/auth/login', {
@@ -51,27 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.ok) {
                     // Handle success (e.g., save token, redirect to another page, etc.)
                     localStorage.setItem('auth-token', data.token);
-                    console.log('Login successful');
                     exampleModal.hide();
                     const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-                    console.log(loginModal);
-                    console.log(exampleModal);
                     document.getElementsByClassName('log-in')[0].style.color = '#007050';
                     loginModal.show();
                     window.location.href = '/home.html';
                 } else {
-                    console.log(exampleModal);
                     console.log("error:\t",data.message);
                     exampleModal.hide();
                     const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));
-                    console.log(document.getElementById('loginNotModal'));
                     loginNotModal.show();
                     document.getElementsByClassName('log-not')[0].style.color = '#e85a76';
                     document.getElementsByClassName('log-not-heading')[0].textContent = 'Invalid email or password';
-                    console.log(document.getElementsByClassName('log-not-heading')[0].textContent); 
                 }
             } catch (error) {
-                console.log(exampleModal);
                 console.log('Error:', error);
                 exampleModal.hide();
                 const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));

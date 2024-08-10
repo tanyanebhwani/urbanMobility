@@ -1,4 +1,3 @@
-//const connectToMongo = require('./db');
 const express = require('express');
 var cors = require('cors');
 var dotenv = require('dotenv');
@@ -23,7 +22,6 @@ mongoose.connect(
 });
 
 const app = express();
-/*connectToMongo()*/
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // To parse URL-encoded bodies

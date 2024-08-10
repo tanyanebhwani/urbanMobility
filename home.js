@@ -13,7 +13,6 @@ menuBlock = document.getElementsByClassName('nav-items-vertical')[0];
 rotate = 0;
 let startAddress, endAddress, startMarker, endMarker;
 svg.addEventListener('click', () => {
-    console.log('I am listening');
     if (rotate == 0) {
         svg.style.rotate = '90deg';
         rotate = 1;
@@ -30,12 +29,9 @@ svg.addEventListener('click', () => {
     }
 });
 routeInfo = document.getElementById('route-info');
-console.log("It's Working");
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("Outside login form");
     document.getElementsByClassName('login-form')[0].addEventListener('submit', async (event) => {
         event.preventDefault();
-        console.log("inside login form");
         let isValid = true;
         const username = document.getElementById('username').value;
         const password = document.getElementById('InputPassword').value;
@@ -50,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (isValid) {
-            console.log('listening');
             // Proceed with form submission or further processing
             try {
                 const response = await fetch('https://urbanmobility.onrender.com/api/auth/login', {
@@ -64,28 +59,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.ok) {
                     // Handle success (e.g., save token, redirect to another page, etc.)
                     localStorage.setItem('auth-token', data.token);
-                    console.log('Login successful');
                     exampleModal.hide();
                     const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-                    console.log(loginModal);
-                    console.log(exampleModal);
                     document.getElementsByClassName('log-in')[0].style.color = '#007050';
                     loginModal.show();
                     window.location.href = '/home.html';
                 } else {
-                    console.log(exampleModal);
                     console.log("error:\t", data.message);
                     exampleModal.hide();
                     const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));
-                    console.log(document.getElementById('loginNotModal'));
                     loginNotModal.show();
                     document.getElementsByClassName('log-not')[0].style.color = '#e85a76';
                     document.getElementsByClassName('log-not-heading')[0].textContent = 'Invalid email or password';
-                    console.log(document.getElementsByClassName('log-not-heading')[0].textContent);
                 }
             } catch (error) {
-                console.log(exampleModal);
-                console.log('Error:', error);
                 exampleModal.hide();
                 const loginNotModal = new bootstrap.Modal(document.getElementById('loginNotModal'));
                 document.getElementsByClassName('log-not')[0].style.color = '#e85a76';
@@ -174,13 +161,10 @@ function calculateRoute() {
     clearError();
     startLoc = startGeocoder.mapMarker ? startGeocoder.mapMarker.getLngLat() : null;
     endLoc = endGeocoder.mapMarker ? endGeocoder.mapMarker.getLngLat() : null;
-    console.log(startLoc, endLoc);
     if (!startLoc || !endLoc) {
         showError("Please enter valid starting and destination points.");
         return;
     }
-
-    console.log("\nStart : (" + startLoc.lng + "," + startLoc.lat + ") \nend Latitude: (" + endLoc.lng + "," + endLoc.lat + ") \n");
 
     const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${startLoc.lng},${startLoc.lat};${endLoc.lng},${endLoc.lat}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`;
     fetch(url)
@@ -188,11 +172,9 @@ function calculateRoute() {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
-            console.log(response);
             return response.json();
         })
         .then(data => {
-            console.log(data);
             if (data.routes.length === 0) {
                 showError("No route found.");
                 return;
@@ -203,9 +185,7 @@ function calculateRoute() {
             routeInfo.style.display = 'flex';
             document.getElementById("distance").innerText = `Distance: ${distance.toFixed(2)} km`;
             document.getElementById("duration").innerText = `Estimated Time: ${duration.toFixed(2)} minutes`;
-            console.log(route);
             const coordinates = route.geometry.coordinates;
-            console.log(coordinates);
             const geojson = {
                 type: 'Feature',
                 properties: {},
@@ -305,10 +285,6 @@ async function saveFavoriteRoute() {
         showError("Please enter valid starting and destination points.");
         return;
     }
-    console.log("Fetching start and end addresses...");
-
-    console.log("Start Address:", startAddress);
-    console.log("End Address:", endAddress);
     if (!distance || !duration) {
         showError("Please click on 'calculate route' button to save to favorites.");
         return;
@@ -343,7 +319,6 @@ async function saveFavoriteRoute() {
         if (response.ok) {
             fetchFavorites(); // Refresh the list of favorites
         } else {
-            console.log(startAddress, endAddress, distance, duration);
             console.error('Error adding favorite:', await response.text());
         }
     } catch (error) {
@@ -390,7 +365,6 @@ async function viewFavorite(favoriteId) {
         return;
     }
     try {
-        console.log(favoriteId);
         const response = await fetch(`${API_URL}/api/favorites/fetchOne/${favoriteId}`, {
             method: 'GET',
             headers: {
@@ -399,20 +373,16 @@ async function viewFavorite(favoriteId) {
             }
         });
         const favorite = await response.json();
-        console.log(favorite);
         if (response.ok) {
             const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${favorite.startCoordinates.coordinates[0]},${favorite.startCoordinates.coordinates[1]};${favorite.endCoordinates.coordinates[0]},${favorite.endCoordinates.coordinates[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`;
-            console.log(url);
             fetch(url)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok ' + response.statusText);
                     }
-                    console.log(response);
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data);
                     if (data.routes.length === 0) {
                         showError("No route found.");
                         return;
@@ -423,9 +393,7 @@ async function viewFavorite(favoriteId) {
                     routeInfo.style.display = 'flex';
                     document.getElementById("distance").innerText = `Distance: ${distance.toFixed(2)} km`;
                     document.getElementById("duration").innerText = `Estimated Time: ${duration.toFixed(2)} minutes`;
-                    console.log(route);
                     const coordinates = route.geometry.coordinates;
-                    console.log(coordinates);
                     const geojson = {
                         type: 'Feature',
                         properties: {},
@@ -442,7 +410,6 @@ async function viewFavorite(favoriteId) {
                         end.innerHTML = favorite.endLocation;
                         const startCoordinates = [ Number(favorite.startCoordinates.coordinates[0]) , Number(favorite.startCoordinates.coordinates[1]) ];
                         const endCoordinates = [ Number(favorite.endCoordinates.coordinates[0]) , Number(favorite.endCoordinates.coordinates[1]) ];
-                        console.log("true");
                         map.addSource('route', {
                             type: 'geojson',
                             data: geojson
@@ -475,7 +442,6 @@ async function viewFavorite(favoriteId) {
                             }
                         });
                     }
-                    console.log("Hello");
                 })
                 .catch(error => {
                     console.error("Directions request failed:", error);
