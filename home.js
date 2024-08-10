@@ -134,6 +134,13 @@ function clearForm(){
     routeInfo.style.display = 'none';
     document.getElementById('start').appendChild(startGeocoder.onAdd(map));
     document.getElementById('end').appendChild(endGeocoder.onAdd(map));
+    map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-79.4512, 43.6568],
+        zoom: 10
+    });
     if (map.getLayer('route')) {
         // Remove the route layer
         map.removeLayer('route');
@@ -369,6 +376,13 @@ async function deleteFavorite(favoriteId) {
     }
 }
 async function viewFavorite(favoriteId) {
+    map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-79.4512, 43.6568],
+        zoom: 10
+    });
     const token = getAuthToken();
     if (!token) {
         const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
