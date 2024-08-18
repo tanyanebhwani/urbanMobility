@@ -6,7 +6,6 @@
   justify-content: center;
 }
 .container {
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +54,6 @@
 /* Contact Support Section */
 #contact{
   background: linear-gradient(90deg, #dcf0ea 70%,#d58998 30%);
-  height: 180vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +63,7 @@
 .contact-heading{
   font-size: 4rem;
   font-weight: 300;
-  padding-bottom: 40px;
+  padding: 20px 0 40px 0;
   color: #ed143f;
 }
 .contact-section-content{
@@ -73,7 +71,6 @@
   border: none;
   border-radius: 20px;
   width: 70%;
-  height: 800px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -112,13 +109,52 @@ textarea{
 .footer-and-links{
   width: 100%;
 }
+@media only screen and (max-width: 1208px){
+   .container{
+    padding: 80px 30px;
+   }
+}
+@media only screen and (max-width: 940px){
+  .container{
+    margin: 30px 0px;
+  }
+  .faq-heading{
+    font-size: 2.5rem;
+  }
+  .accordion-item .accordion-button{
+    padding: 15px;
+    font-size: 1rem;
+  }
+  .accordion-item .accordion-collapse{
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+  .container{
+    padding: 50px 30px;
+  }
+  .contact-heading{
+    font-size: 2.5rem;
+  }
+  .contact-form{
+    font-size: 1.1rem;
+  }
+  .btn-ask{
+    font-size: 1.1rem;
+  }
+  .form-control{
+    padding: 7px;
+  }
+  .btn-ask{
+    padding: 7px;
+  }
+  .contact-section-content{
+    margin-top: 50px;
+  } 
+}
 @media only screen and (max-width: 920px){
   .container{
     width: 95%;
-    padding: 120px 80px;
-  }
-  .accordion-button{
-    padding: 30px;
+    padding: 80px 40px;
   }    
 }
 @media only screen and (max-width: 872px){
@@ -132,7 +168,7 @@ textarea{
 }
 @media only screen and (max-width: 794px){
   .container{
-    padding: 120px 40px;   
+    padding: 80px 10px;   
   }
   .faq-heading{
     font-size: 2.5rem;
@@ -141,27 +177,45 @@ textarea{
     font-size: 2.5rem;
   }
 }
-@media only screen and (max-width: 659px){
+@media only screen and (max-width: 774px){
   .container{
-    padding: 120px 20px;   
+   padding: 40px 5px; 
+  }
+  .contact-section-content{
+    width: 90vw;
+    border-radius: 10px;
   }
   .faq-heading{
-    font-size: 2rem;
+    margin-bottom: 40px;
   }
-  .accordion-button{
-    font-size: 1.25rem;
+  .container{
+    margin: 10px 0;
   }
-  .accordion-collapse{
-    font-size: 1.25rem;
+  .faq-heading{
+    font-size: 1.75rem;
   }
   .contact-heading{
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
-  label{
-    font-size: 1rem;
+  .form-control{
+    font-size: 0.75rem;
+  }
+  .btn-ask{
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 659px){
+  .container{
+    padding: 40px 5px;   
   }
   .contact-section-content{
     width: 90%;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 570px){
+  label{
+    font-size: 0.75rem;
   }
 }
 @media only screen and (max-width: 530px){
@@ -175,24 +229,64 @@ textarea{
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 490px){
+@media only screen and (max-width: 504px){
   .container{
-    padding: 80px 10px;
-    margin: 50px 0;   
+    padding: 40px 2px;   
   }
   .faq-heading{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+  .accordion-item .accordion-button{
+    font-size: 0.75rem;
+  }
+  .accordion-item .accordion-collapse{
+    font-size: 0.75rem;
+  }
+  .contact-heading{
+    font-size: 1.5rem;
+  }
+  .form-group{
+    font-size: 0.75rem;
+  }
+  .btn-ask{
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 490px){
+  .container{
+    padding: 40px 2px;
+    margin: 10px 0;   
+  }
+  .faq-heading{
+    font-size: 1.5rem;
   }
   .accordion-button{
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   .accordion-collapse{
-    font-size: 1rem;
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 442px){
+  .faq-heading{
+    font-size: 1.25rem;
+  }
+  .accordion-button{
+    font-size: 0.75rem;
+  }
+  .accordion-collapse{
+    font-size: 0.75rem;
+  }
+  .container{
+    width: 100%;   
   }
 }
 @media only screen and (max-width: 400px){
   .container{
-    padding: 50px 10px;
-    margin: 20px 0;   
+    padding: 40px 2px;
+    margin: 5px 0;   
+  }
+  #faq{
+    padding: 5px 0;
   }
 }
