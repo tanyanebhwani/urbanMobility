@@ -9,23 +9,21 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 10px;
+  margin: 0px 10px 30px 10px;
 }
-.inputClass{
-  height: 50vh;
-}
-.mapSec{
-  height: 400px;
+.main-content{
+  margin-top: 0;
 }
 #map{
   width: 100%;
   height: 400px;
+  margin-top: 0;
+  position: relative;
 }
 .location-input{
   color: #00a274;
   background-color: #febfcc;
   width: 60%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +37,7 @@ section{
 .form-heading{
   color: #00a274;
   font-size: 1.85rem;
-  margin-bottom: 20px;
+  margin: 30px 0;
   text-align: center;
 }
 .route-form{
@@ -52,6 +50,7 @@ section{
 }
 .form-field{
   font-size: 1.20rem;
+  margin-bottom: 30px;
   width: 70%;
   display: flex;
   align-items: center;
@@ -88,6 +87,7 @@ section{
   background-color: #00a274;
   border: none;
   color:white;
+  margin-right: 15px;
 }
 .btn-calculate-route:hover{
   color: #00a274;
@@ -126,9 +126,11 @@ section{
 }
 #route-info h2{
   text-align: center;
+  margin: 30px 0;
 }
 #route-info p{
   margin-left: 40px;
+  margin-bottom: 30px;
 }
 .error-message{
   display: none;
@@ -168,6 +170,9 @@ section{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.favorites p{
+  text-align: center;
 }
 .fav-item{
   margin: 20px 0;
@@ -210,4 +215,234 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1286px) {
+  .favorites-section{
+    padding: 120px 70px;
+  }
+}
+@media (max-width: 1164px) {
+  .inputClass{
+    flex-direction: column;
+  }
+  .location-input{
+    width: 70%;
+    margin: 0 50px 30px 50px;
+  }
+  #route-info{
+    width: 70%;
+    margin: auto;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 1016px) {
+  .btn{
+    padding: 15px 30px;
+    margin-right: 10px;
+  }
+  .route-buttons{
+    justify-content: center;
+  }
+  .location-input{
+    width: 90%;
+  }
+  .post-head{
+    font-size: 1.5rem;
+  }
+  .favorites{
+    font-size: 0.75rem;
+  }
+  .card-text{
+    font-size: 1rem;
+  }
+  .favorites .card-title{
+    text-align: center;
+  }
+  #route-info{
+    width: 90%;
+    margin: auto;
+  }  
+}
+@media (max-width: 806px) {
+  .card-title{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 738px) {
+  .favorites{
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 700px) {
+  .favorites-section{
+    padding: 120px 50px;
+  }
+  .form-field{
+    width: 80%;
+  }
+  .route-buttons{
+    width: 90%;
+  }
+}
+@media (max-width: 646px) {
+  .form-heading{
+    font-size: 1.5rem;
+  }
+  .form-field{
+    font-size: 1rem;
+  }
+  .btn{
+    font-size: 0.75rem;
+  }
+  .location-input .mapboxgl-ctrl-geocoder--input {
+    height: 36px!important;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 606px) {
+  .location-input{
+    width: 95%;
+  }
+  #route-info{
+    width: 95%;
+    margin: auto;
+  }
+  .route-form{
+    width: 100%;
+  }
+  .route-buttons{
+    width: 100%;
+  }
+  #start{
+    margin-left: 0px;
+  }
+  #end{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 560px) {
+  .favorites-section{
+    padding: 90px 30px;
+  }
+  .card-text{
+    font-size: 0.75rem;
+  }
+  .button-sec .btn-view{
+    margin-right: 0;
+  }
+  .favorites{
+    margin: 0;
+  }
+}
+@media (max-width: 516px) {
+  .favorites-section{
+    padding: 90px 5px;
+  }
+  .favorites{
+    width: 95%;
+  }
+}
+@media (max-width: 484px) {
+  .location-input .mapboxgl-ctrl-geocoder--input {
+    padding: 6px 20px 6px 40px!important;
+  }
+  .form-field{
+    width: 90%;
+  }
+  .btn-reset-form{
+    margin-right: 0;    
+  }
+  .btn-save-favorite{
+    padding: 10px 20px;
+  }
+  .btn-calculate-route{
+    padding: 10px 20px;
+  }
+  .btn-reset-form{
+    padding: 10px 20px;
+  }
+  .location-input .mapboxgl-ctrl-geocoder--input {
+    width: 180px;
+    padding-right: 0!important;
+  }
+  .fav-item{
+    height: 350px;
+  }
+  .favorites-section{
+    width: 95%;
+  }
+  .button-sec{
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-sec button{
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 469px) {
+  .favorites{
+    padding: 30px 20px;
+    width: 80%;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 439px) {
+  .form-field{
+    justify-content: space-evenly;
+  }
+  .route-buttons{
+    justify-content: center;
+  }
+  .location-input .mapboxgl-ctrl-geocoder{
+    width: 100%;
+    min-width: 100px!important;
+  }
+}
+@media (max-width: 420px) {
+  .route-buttons{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }  
+  .btn-calculate-route{
+    width: 98%;
+  }
+  .btn-save-favorite{
+    width: 98%;
+  }
+  .btn-reset-form{
+    width: 98%;
+  }
+  .location-input{
+    height: 70%;
+  }
+  .route-form{
+    height: 90%;
+    justify-content: center;
+  }
+  .form-field{
+    margin-bottom: 20px;
+  }
+  .form-heading{
+    margin-top: 20px;
+  }
+  .btn-calculate-route{
+    margin-bottom: 10px;
+  }
+  .btn-save-favorite{
+    margin-bottom: 10px;
+  }
+  .btn-reset-form{
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 406px) {
+  .favorites{
+    padding: 30px 10px;
+    width: 95%;
+  }
+  .favorites-section{
+    width: 100%;
+  }
 }

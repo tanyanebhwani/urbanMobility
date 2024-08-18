@@ -636,7 +636,8 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #febfcc;
+        border-bottom: 2px solid #febfcc;
+        border-top: 2px solid #febfcc;
         width: 100%;
     }
     .banner-text-content{
