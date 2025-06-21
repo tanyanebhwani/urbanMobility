@@ -40,12 +40,6 @@ While the core functionality aligns with existing map tools, this project aims t
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots here if you have any)*
-
----
-
 ## ⚙️ Installation
 
 ### 📁 Frontend:
@@ -120,8 +114,8 @@ The project was initially inspired by a desire to build something around sustain
 
 Through this project, I learned:
 
---Implementing APIs like Mapbox
---Handling JWT-based authentication
---Storing user data securely with MongoDB and bcrypt
---Structuring and managing a full-stack project end-to-end
+- Implementing APIs like Mapbox
+- Handling JWT-based authentication
+- Storing user data securely with MongoDB and bcrypt
+- Structuring and managing a full-stack project end-to-end
 
