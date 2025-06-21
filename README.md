@@ -44,31 +44,31 @@ While the core functionality aligns with existing map tools, this project aims t
 
 ### 📁 Frontend:
 
-No installation needed. Open `index.html` or use the hosted version.
+ No installation needed. Open `index.html` or use the hosted version.
 
 ### 💻 Backend:
 
-Make sure you have Node.js installed.
+ Make sure you have Node.js installed.
 
    1. Clone the repository:
       
-      <pre>git clone https://github.com/tanyanebhwani/urban-mobility-planner.git</pre>
-      cd urban-mobility-planner
+    git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
+    cd urban-mobility-planner
 
       Install dependencies:
 
-        #### npm install mongoose jsonwebtoken bcryptjs express
+    npm install mongoose jsonwebtoken bcryptjs express
 
       Run the backend:
 
-        #### npm run backend
+    npm run backend
 
    3. Open the frontend:
     
       Open your browser and navigate to
        #### https://localhost:27017/urbanMobility/index.html
 
-     📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+      📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
 
    3. 🔐 Authentication
       Signup/Login required only for saving routes.
