@@ -61,43 +61,43 @@ Make sure you have **Node.js** installed.
 
     npm run backend
 
-  Open the frontend:
+2.Open the frontend:
     
    Open your browser and navigate to
    https://localhost:27017/urbanMobility/index.html
 
-📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+  📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
 
-🔐 Authentication
+  🔐 Authentication
    Signup/Login required only for saving routes.
 
-Unauthenticated users can:
+  Unauthenticated users can:
 
- - View routes and travel details
+   - View routes and travel details
 
-Authenticated users can:
+  Authenticated users can:
 
-- Save routes to favorites
-- View saved routes on the map
+  - Save routes to favorites
+  - View saved routes on the map
 
-No user roles are implemented at this stage.
+  No user roles are implemented at this stage.
 
-🛣️ How to Use
+  🛣️ How to Use
 
-- Enter the source and destination in the input boxes.
-- Click on Get Route to view the optimal path.
+   - Enter the source and destination in the input boxes.
+   - Click on Get Route to view the optimal path.
 
-If logged in:
+  If logged in:
 
-- Click on Add to Favorites to save the route.
-- Click on View Favorites to revisit saved paths on the map.
+   - Click on Add to Favorites to save the route.
+   - Click on View Favorites to revisit saved paths on the map.
 
-If not logged in:
+ If not logged in:
 
-- Click Try for Free to use routing without saving options.
+  - Click Try for Free to use routing without saving options.
 
 🛤️ Future Improvements
-- Some features currently planned:
+  - Some features currently planned:
 
 🔄 Show live traffic updates on the route.
 
@@ -110,7 +110,7 @@ If not logged in:
 🛠️ Feature upgrades and UX improvements are under development.
 
 🎯 Motivation & Learnings
-The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
+ The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
 
 Through this project, I learned:
 
