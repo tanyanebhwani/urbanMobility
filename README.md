@@ -107,8 +107,8 @@ While the core functionality aligns with existing map tools, this project aims t
    📈 Maintain route history and analytics per user.
 
 ### 📊 Project Status
-   ✅ Complete v1 — All core features are functional.
-   🛠️ Feature upgrades and UX improvements are under development.
+    ✅ Complete v1 — All core features are functional.
+    🛠️ Feature upgrades and UX improvements are under development.
 
 ### 🎯 Motivation & Learnings
    The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
