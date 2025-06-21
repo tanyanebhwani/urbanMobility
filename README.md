@@ -50,72 +50,73 @@ While the core functionality aligns with existing map tools, this project aims t
 
  Make sure you have Node.js installed.
 
-   1. Clone the repository:
-      
+1. Clone the repository:
+
     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
     cd urban-mobility-planner
 
-      Install dependencies:
+   Install dependencies:
 
     npm install mongoose jsonwebtoken bcryptjs express
 
-      Run the backend:
+   Run the backend:
 
     npm run backend
 
-   2. Open the frontend:
+2. Open the frontend:
     
-      Open your browser and navigate to
-       #### https://localhost:27017/urbanMobility/index.html
+   Open your browser and navigate to
+   #### https://localhost:27017/urbanMobility/index.html
 
-      📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+  📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
 
-   3. 🔐 Authentication
-      Signup/Login required only for saving routes.
+3. 🔐 Authentication
 
-      Unauthenticated users can:
+   Signup/Login required only for saving routes.
 
-        - View routes and travel details
+   Unauthenticated users can:
 
-      Authenticated users can:
+    - View routes and travel details
 
-        - Save routes to favorites
-        - View saved routes on the map
+   Authenticated users can:
 
-      No user roles are implemented at this stage.
+    - Save routes to favorites
+    - View saved routes on the map
 
-   4. 🛣️ How to Use
+   No user roles are implemented at this stage.
 
-      - Enter the source and destination in the input boxes.
-      - Click on Get Route to view the optimal path.
+4. 🛣️ How to Use
 
-      If logged in:
+    - Enter the source and destination in the input boxes.
+    - Click on Get Route to view the optimal path.
 
-       - Click on Add to Favorites to save the route.
-       - Click on View Favorites to revisit saved paths on the map.
+    If logged in:
 
-     If not logged in:
+     - Click on Add to Favorites to save the route.
+     - Click on View Favorites to revisit saved paths on the map.
 
-       - Click Try for Free to use routing without saving options.
+    If not logged in:
+
+     - Click Try for Free to use routing without saving options.
 
 ### 🛤️ Future Improvements
   - Some features currently planned:
 
-     🔄 Show live traffic updates on the route.
-     🌦️ Integrate real-time weather data along the path.
-     📈 Maintain route history and analytics per user.
+   🔄 Show live traffic updates on the route.
+   🌦️ Integrate real-time weather data along the path.
+   📈 Maintain route history and analytics per user.
 
 ### 📊 Project Status
-    ✅ Complete v1 — All core features are functional.
-    🛠️ Feature upgrades and UX improvements are under development.
+   ✅ Complete v1 — All core features are functional.
+   🛠️ Feature upgrades and UX improvements are under development.
 
 ### 🎯 Motivation & Learnings
-  The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
+   The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
 
-Through this project, I learned:
+  Through this project, I learned:
 
-- Implementing APIs like Mapbox
-- Handling JWT-based authentication
-- Storing user data securely with MongoDB and bcrypt
-- Structuring and managing a full-stack project end-to-end
+ - Implementing APIs like Mapbox
+ - Handling JWT-based authentication
+ - Storing user data securely with MongoDB and bcrypt
+ - Structuring and managing a full-stack project end-to-end
 
