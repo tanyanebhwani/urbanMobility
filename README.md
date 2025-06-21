@@ -44,11 +44,11 @@ While the core functionality aligns with existing map tools, this project aims t
 
 ### 📁 Frontend:
 
-    No installation needed. Open index.html or use the hosted version.
+     No installation needed. Open `index.html` or use the hosted version.
 
 ### 💻 Backend:
 
-   Make sure you have Node.js installed.
+    Make sure you have Node.js installed.
 
    1. Clone the repository:
       
