@@ -50,7 +50,7 @@ No installation needed. Open `index.html` or use the hosted version.
 
 Make sure you have Node.js installed.
 
- 1. Clone the repository:
+- Clone the repository:
     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
     cd urban-mobility-planner
 
@@ -62,9 +62,9 @@ Make sure you have Node.js installed.
 
     npm run backend
       
- 2. Open the frontend:
+ - Open the frontend:
 
- Open your browser and navigate to
+  Open your browser and navigate to
  #### https://localhost:27017/urbanMobility/index.html
 
 📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
