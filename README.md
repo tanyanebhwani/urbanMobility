@@ -52,16 +52,16 @@ While the core functionality aligns with existing map tools, this project aims t
 
 1. Clone the repository:
 
-    git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
-    cd urban-mobility-planner
+     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
+     cd urban-mobility-planner
 
    Install dependencies:
 
-    npm install mongoose jsonwebtoken bcryptjs express
+     npm install mongoose jsonwebtoken bcryptjs express
 
    Run the backend:
 
-    npm run backend
+     npm run backend
 
 2. Open the frontend:
     
