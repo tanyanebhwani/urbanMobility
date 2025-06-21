@@ -55,15 +55,15 @@ While the core functionality aligns with existing map tools, this project aims t
     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
     cd urban-mobility-planner
 
-   Install dependencies:
+      Install dependencies:
 
     npm install mongoose jsonwebtoken bcryptjs express
 
-   Run the backend:
+      Run the backend:
 
     npm run backend
 
-   3. Open the frontend:
+   2. Open the frontend:
     
       Open your browser and navigate to
        #### https://localhost:27017/urbanMobility/index.html
@@ -89,14 +89,14 @@ While the core functionality aligns with existing map tools, this project aims t
       - Enter the source and destination in the input boxes.
       - Click on Get Route to view the optimal path.
 
-     If logged in:
+      If logged in:
 
-      - Click on Add to Favorites to save the route.
-      - Click on View Favorites to revisit saved paths on the map.
+       - Click on Add to Favorites to save the route.
+       - Click on View Favorites to revisit saved paths on the map.
 
-    If not logged in:
+     If not logged in:
 
-      - Click Try for Free to use routing without saving options.
+       - Click Try for Free to use routing without saving options.
 
 ### 🛤️ Future Improvements
   - Some features currently planned:
