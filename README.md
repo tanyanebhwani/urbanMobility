@@ -43,12 +43,15 @@ While the core functionality aligns with existing map tools, this project aims t
 ## ⚙️ Installation
 
 ### 📁 Frontend:
+
     No installation needed. Open `index.html` or use the hosted version.
 
 ### 💻 Backend:
+
     Make sure you have **Node.js** installed.
 
    1. Clone the repository:
+      
       git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
       cd urban-mobility-planner
 
@@ -60,7 +63,7 @@ While the core functionality aligns with existing map tools, this project aims t
 
         #### npm run backend
 
-   2. Open the frontend:
+   3. Open the frontend:
     
       Open your browser and navigate to
        #### https://localhost:27017/urbanMobility/index.html
