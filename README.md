@@ -55,11 +55,11 @@ While the core functionality aligns with existing map tools, this project aims t
     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
     cd urban-mobility-planner
 
-      Install dependencies:
+   Install dependencies:
 
     npm install mongoose jsonwebtoken bcryptjs express
 
-      Run the backend:
+   Run the backend:
 
     npm run backend
 
