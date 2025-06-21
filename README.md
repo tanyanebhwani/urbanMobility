@@ -48,11 +48,11 @@ While the core functionality aligns with existing map tools, this project aims t
 
 ### 💻 Backend:
 
-    Make sure you have **Node.js** installed.
+    - Make sure you have **Node.js** installed.
 
    1. Clone the repository:
       
-      git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
+      <pre>git clone https://github.com/tanyanebhwani/urban-mobility-planner.git</pre>
       cd urban-mobility-planner
 
       Install dependencies:
