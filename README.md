@@ -91,8 +91,8 @@ While the core functionality aligns with existing map tools, this project aims t
 
      If logged in:
 
-       - Click on Add to Favorites to save the route.
-       - Click on View Favorites to revisit saved paths on the map.
+      - Click on Add to Favorites to save the route.
+      - Click on View Favorites to revisit saved paths on the map.
 
     If not logged in:
 
