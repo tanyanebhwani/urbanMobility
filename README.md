@@ -60,7 +60,7 @@ Make sure you have Node.js installed.
 
  Run the backend:
 
-   npm run backend
+    npm run backend
       
  2. Open the frontend:
 
@@ -69,7 +69,7 @@ Make sure you have Node.js installed.
 
 📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
 
- 3. 🔐 Authentication
+ 3.🔐 Authentication
 
  Signup/Login required only for saving routes.
 
@@ -84,37 +84,37 @@ Make sure you have Node.js installed.
 
  No user roles are implemented at this stage.
 
- 4. 🛣️ How to Use
+ 4.🛣️ How to Use
 
   - Enter the source and destination in the input boxes.
   - Click on Get Route to view the optimal path.
 
   If logged in:
-   - Click on Add to Favorites to save the route.
-   - Click on View Favorites to revisit saved paths on the map.
+  - Click on Add to Favorites to save the route.
+  - Click on View Favorites to revisit saved paths on the map.
 
  If not logged in:
 
-   - Click Try for Free to use routing without saving options.
+ - Click Try for Free to use routing without saving options.
 
 ### 🛤️ Future Improvements
-   - Some features currently planned:
+ - Some features currently planned:
 
-    🔄 Show live traffic updates on the route.
-    🌦️ Integrate real-time weather data along the path.
-    📈 Maintain route history and analytics per user.
+  🔄 Show live traffic updates on the route.
+  🌦️ Integrate real-time weather data along the path.
+  📈 Maintain route history and analytics per user.
 
 ### 📊 Project Status
-    ✅ Complete v1 — All core features are functional.
-    🛠️ Feature upgrades and UX improvements are under development.
+ ✅ Complete v1 — All core features are functional.
+ 🛠️ Feature upgrades and UX improvements are under development.
 
 ### 🎯 Motivation & Learnings
-    The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
+ The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
 
-    Through this project, I learned:
+ Through this project, I learned:
 
-     - Implementing APIs like Mapbox
-     - Handling JWT-based authentication
-     - Storing user data securely with MongoDB and bcrypt
-     - Structuring and managing a full-stack project end-to-end
+ - Implementing APIs like Mapbox
+ - Handling JWT-based authentication
+ - Storing user data securely with MongoDB and bcrypt
+ - Structuring and managing a full-stack project end-to-end
 
