@@ -50,7 +50,8 @@ No installation needed. Open `index.html` or use the hosted version.
 
 Make sure you have Node.js installed.
 
-- Clone the repository:
+-Clone the repository:
+
     git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
     cd urban-mobility-planner
 
@@ -62,14 +63,14 @@ Make sure you have Node.js installed.
 
     npm run backend
       
- - Open the frontend:
+-Open the frontend:
 
   Open your browser and navigate to
- #### https://localhost:27017/urbanMobility/index.html
+  #### https://localhost:27017/urbanMobility/index.html
 
-📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+ 📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
 
- 3.🔐 Authentication
+-🔐 Authentication
 
  Signup/Login required only for saving routes.
 
@@ -84,34 +85,34 @@ Make sure you have Node.js installed.
 
  No user roles are implemented at this stage.
 
- 4.🛣️ How to Use
+-🛣️ How to Use
 
   - Enter the source and destination in the input boxes.
   - Click on Get Route to view the optimal path.
 
-  If logged in:
-  - Click on Add to Favorites to save the route.
-  - Click on View Favorites to revisit saved paths on the map.
+If logged in:
+ - Click on Add to Favorites to save the route.
+ - Click on View Favorites to revisit saved paths on the map.
 
- If not logged in:
+If not logged in:
 
  - Click Try for Free to use routing without saving options.
 
 ### 🛤️ Future Improvements
  - Some features currently planned:
 
-  🔄 Show live traffic updates on the route.
-  🌦️ Integrate real-time weather data along the path.
-  📈 Maintain route history and analytics per user.
+ 🔄 Show live traffic updates on the route.
+ 🌦️ Integrate real-time weather data along the path.
+ 📈 Maintain route history and analytics per user.
 
 ### 📊 Project Status
  ✅ Complete v1 — All core features are functional.
  🛠️ Feature upgrades and UX improvements are under development.
 
 ### 🎯 Motivation & Learnings
- The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
+The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
 
- Through this project, I learned:
+Through this project, I learned:
 
  - Implementing APIs like Mapbox
  - Handling JWT-based authentication
