@@ -44,46 +44,46 @@ While the core functionality aligns with existing map tools, this project aims t
 
 ### 📁 Frontend:
 
-   No installation needed. Open `index.html` or use the hosted version.
+    No installation needed. Open `index.html` or use the hosted version.
 
 ### 💻 Backend:
 
-   Make sure you have Node.js installed.
+    Make sure you have Node.js installed.
 
-1. Clone the repository:
-
-     <pre>git clone https://github.com/tanyanebhwani/urban-mobility-planner.git</pre>
-     <pre>cd urban-mobility-planner</pre>
-
-   Install dependencies:
-
-     <pre>npm install mongoose jsonwebtoken bcryptjs express</pre>
-
-   Run the backend:
-
-     <pre>npm run backend</pre>
-
-2. Open the frontend:
+    1. Clone the repository:
     
-    Open your browser and navigate to
-     #### https://localhost:27017/urbanMobility/index.html
+      <pre>git clone https://github.com/tanyanebhwani/urban-mobility-planner.git</pre>
+      <pre>cd urban-mobility-planner</pre>
+    
+      Install dependencies:
+    
+      <pre>npm install mongoose jsonwebtoken bcryptjs express</pre>
 
-   📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+      Run the backend:
 
-3. 🔐 Authentication
+      <pre>npm run backend</pre>
+      
+    2. Open the frontend:
+      
+      Open your browser and navigate to
+       #### https://localhost:27017/urbanMobility/index.html
+
+     📝 Note: MongoDB is used as my own cluster, so no cloud database setup is required.
+
+   3. 🔐 Authentication
 
      Signup/Login required only for saving routes.
 
-    Unauthenticated users can:
+     Unauthenticated users can:
 
-     - View routes and travel details
+      - View routes and travel details
 
-    Authenticated users can:
+     Authenticated users can:
 
-     - Save routes to favorites
-     - View saved routes on the map
+      - Save routes to favorites
+      - View saved routes on the map
 
-    No user roles are implemented at this stage.
+     No user roles are implemented at this stage.
 
 4. 🛣️ How to Use
 
@@ -92,31 +92,31 @@ While the core functionality aligns with existing map tools, this project aims t
 
     If logged in:
 
-     - Click on Add to Favorites to save the route.
-     - Click on View Favorites to revisit saved paths on the map.
+    - Click on Add to Favorites to save the route.
+    - Click on View Favorites to revisit saved paths on the map.
 
     If not logged in:
 
-     - Click Try for Free to use routing without saving options.
+    - Click Try for Free to use routing without saving options.
 
 ### 🛤️ Future Improvements
     - Some features currently planned:
 
-     🔄 Show live traffic updates on the route.
-     🌦️ Integrate real-time weather data along the path.
-     📈 Maintain route history and analytics per user.
+      🔄 Show live traffic updates on the route.
+      🌦️ Integrate real-time weather data along the path.
+      📈 Maintain route history and analytics per user.
 
 ### 📊 Project Status
-    ✅ Complete v1 — All core features are functional.
-    🛠️ Feature upgrades and UX improvements are under development.
+     ✅ Complete v1 — All core features are functional.
+     🛠️ Feature upgrades and UX improvements are under development.
 
 ### 🎯 Motivation & Learnings
-    The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
+     The project was initially inspired by a desire to build something around sustainable urban mobility, in line with the UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities).
 
-    Through this project, I learned:
+     Through this project, I learned:
 
-     - Implementing APIs like Mapbox
-     - Handling JWT-based authentication
-     - Storing user data securely with MongoDB and bcrypt
-     - Structuring and managing a full-stack project end-to-end
+      - Implementing APIs like Mapbox
+      - Handling JWT-based authentication
+      - Storing user data securely with MongoDB and bcrypt
+      - Structuring and managing a full-stack project end-to-end
 
