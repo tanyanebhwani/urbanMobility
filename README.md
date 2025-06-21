@@ -50,7 +50,7 @@ Make sure you have **Node.js** installed.
 
 1. Clone the repository:
    
-   git clone https://github.com/yourusername/urban-mobility-planner.git
+   git clone https://github.com/tanyanebhwani/urban-mobility-planner.git
    cd urban-mobility-planner
 
    Install dependencies:
@@ -73,31 +73,31 @@ Make sure you have **Node.js** installed.
 
 Unauthenticated users can:
 
- --View routes and travel details
+ - View routes and travel details
 
 Authenticated users can:
 
---Save routes to favorites
---View saved routes on the map
+- Save routes to favorites
+- View saved routes on the map
 
 No user roles are implemented at this stage.
 
 🛣️ How to Use
 
---Enter the source and destination in the input boxes.
---Click on Get Route to view the optimal path.
+- Enter the source and destination in the input boxes.
+- Click on Get Route to view the optimal path.
 
 If logged in:
 
---Click on Add to Favorites to save the route.
---Click on View Favorites to revisit saved paths on the map.
+- Click on Add to Favorites to save the route.
+- Click on View Favorites to revisit saved paths on the map.
 
 If not logged in:
 
---Click Try for Free to use routing without saving options.
+- Click Try for Free to use routing without saving options.
 
 🛤️ Future Improvements
---Some features currently planned:
+- Some features currently planned:
 
 🔄 Show live traffic updates on the route.
 
